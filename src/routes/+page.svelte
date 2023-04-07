@@ -9,7 +9,22 @@
     }
 </style>
 
-<main class="flex flex-col max-w-[1024px] m-auto px-6">
+<main class="flex flex-col max-w-[1280px] m-auto px-6">
+    <nav class="fixed top-0 left-0 right-0 mx-auto z-[2] backdrop-blur text-white py-1 border-b-[1px] border-gray-700">
+        <div class="flex text-md px-2 space-x-6 max-w-[1280px] mx-auto">
+            <a class="flex flex-col font-bold text-2xl" href="/">
+                <h1 class="tracking-widest">BNC</h1>
+            </a>
+            <div class="my-auto space-x-4 w-full">
+                <a href="/">Projects</a>
+                <a href="/">Careers</a>
+                <a href="/">Mission</a>
+            </div>
+            <div class="flex">
+                <button class="ml-auto">Connect</button>
+            </div>
+        </div>
+    </nav>
     <section class="flex h-screen w-full min-h-[500px] text-white m-auto bg-[#00000000]">
         <div class="absolute left-0 h-full w-full z-[1] overflow-hidden pointer-events-all">
             <LinearVaporwave />

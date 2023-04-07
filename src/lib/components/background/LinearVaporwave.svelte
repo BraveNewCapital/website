@@ -24,7 +24,7 @@
         scene.fog = fog;
 
         const textureLoader = new THREE.TextureLoader();
-        const gridTexture = textureLoader.load("/img/grid-dark.png");
+        const gridTexture = textureLoader.load("/img/grid-white.png");
         const heightTexture = textureLoader.load("/img/displacement.png");
         const metalnessTexture = textureLoader.load("/img/metalness.png");
 
@@ -66,7 +66,7 @@
         gui.addColor(ambientLight, "color").name("AmbientLight color");
 
         const spotlight = new THREE.SpotLight(
-            "#d53c3d",
+            "#ffffff",
             40,
             25,
             Math.PI * 0.1,
@@ -81,7 +81,7 @@
         scene.add(spotlight.target);
 
         const spotlight2 = new THREE.SpotLight(
-            "#d53c3d",
+            "#ffffff",
             40,
             25,
             Math.PI * 0.1,
@@ -120,7 +120,7 @@
             0.01,
             20
         );
-        camera.position.x = 0;
+        camera.position.x = 0.01;
         camera.position.y = 0.06;
         camera.position.z = 1.1;
 
@@ -132,6 +132,7 @@
         scene.add(camera);
 
         const renderer = new THREE.WebGLRenderer({
+            antialias: true,
             canvas: canvas,
             alpha: true
         });
@@ -146,7 +147,7 @@
         effectComposer.addPass(renderPass);
 
         const rgbShiftPass = new ShaderPass(RGBShiftShader);
-        rgbShiftPass.uniforms["amount"].value = 0.001;
+        rgbShiftPass.uniforms["amount"].value = 0.0015;
         gui.add(rgbShiftPass.uniforms["amount"], "value").min(0).max(0.01).step(0.00001).name("RGBShift intensity");
         effectComposer.addPass(rgbShiftPass);
         const gammaCorrectionPass = new ShaderPass(GammaCorrectionShader);
