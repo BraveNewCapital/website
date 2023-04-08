@@ -6,6 +6,7 @@
     import { GammaCorrectionShader } from "three/examples/jsm/shaders/GammaCorrectionShader.js";
     import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
     import { RGBShiftShader } from "three/examples/jsm/shaders/RGBShiftShader.js";
+    import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
     import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 	import { onMount } from "svelte";
     import { clamp } from "$lib/util/util.js";
@@ -20,13 +21,22 @@
         
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x000000);
-        const fog = new THREE.Fog("#000000", 1, 2.5);
+        const fog = new THREE.FogExp2("#000000", 1.2);
         scene.fog = fog;
 
         const textureLoader = new THREE.TextureLoader();
         const gridTexture = textureLoader.load("/img/grid-white.png");
         const heightTexture = textureLoader.load("/img/displacement.png");
         const metalnessTexture = textureLoader.load("/img/metalness.png");
+
+        gridTexture.minFilter = THREE.LinearMipmapLinearFilter;
+        gridTexture.magFilter = THREE.LinearFilter;
+
+        heightTexture.minFilter = THREE.LinearMipmapLinearFilter;
+        heightTexture.magFilter = THREE.LinearFilter;
+
+        metalnessTexture.minFilter = THREE.LinearMipmapLinearFilter;
+        metalnessTexture.magFilter = THREE.LinearFilter;
 
         const parameters = {
             displacementScale: 0.4,
@@ -120,8 +130,8 @@
             0.01,
             20
         );
-        camera.position.x = 0.01;
-        camera.position.y = 0.06;
+        camera.position.x = 0.0;
+        camera.position.y = 0.075;
         camera.position.z = 1.1;
 
         let target = new THREE.Vector3(0, 0, 0);
@@ -132,26 +142,33 @@
         scene.add(camera);
 
         const renderer = new THREE.WebGLRenderer({
-            antialias: true,
             canvas: canvas,
             alpha: true
         });
         renderer.setSize(sizes.width, sizes.height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(2);
+
+        gridTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
         const effectComposer = new EffectComposer(renderer);
         effectComposer.setSize(sizes.width, sizes.height);
-        effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        effectComposer.setPixelRatio(2);
 
         const renderPass = new RenderPass(scene, camera);
         effectComposer.addPass(renderPass);
 
         const rgbShiftPass = new ShaderPass(RGBShiftShader);
-        rgbShiftPass.uniforms["amount"].value = 0.0015;
+        rgbShiftPass.uniforms["amount"].value = 0.00015;
         gui.add(rgbShiftPass.uniforms["amount"], "value").min(0).max(0.01).step(0.00001).name("RGBShift intensity");
         effectComposer.addPass(rgbShiftPass);
+
         const gammaCorrectionPass = new ShaderPass(GammaCorrectionShader);
         effectComposer.addPass(gammaCorrectionPass);
+
+        const fxaaPass = new ShaderPass(FXAAShader);
+        fxaaPass.material.uniforms['resolution'].value.x = 1 / (sizes.width * renderer.getPixelRatio());
+		fxaaPass.material.uniforms['resolution'].value.y = 1 / (sizes.height * renderer.getPixelRatio());
+        effectComposer.addPass(fxaaPass);
 
         let bloomParams = {
             strength: 0.2
@@ -180,10 +197,10 @@
             camera.updateProjectionMatrix();
 
             renderer.setSize(sizes.width, sizes.height);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setPixelRatio(2);
 
             effectComposer.setSize(sizes.width, sizes.height);
-            effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            effectComposer.setPixelRatio(2);
         });
 
         const speed = {
