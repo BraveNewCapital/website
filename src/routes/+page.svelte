@@ -4,36 +4,40 @@
 </script>
 
 <style>
-    h1 {
+    .text-shadow {
         text-shadow: 1px 1px 6px #ffffff;
     }
 </style>
 
 <main class="flex flex-col max-w-[1280px] m-auto px-6">
     <nav class="fixed top-0 left-0 right-0 mx-auto z-[2] backdrop-blur text-white py-1 border-b-[1px] border-gray-700">
-        <div class="flex text-md px-2 space-x-6 max-w-[1280px] mx-auto">
-            <a class="flex flex-col font-bold text-2xl" href="/">
-                <h1 class="tracking-widest">BNC</h1>
+        <div class="flex text-md px-2 space-x-6 w-full max-w-[1280px] mx-auto">
+            <a class="flex flex-col font-bold text-4xl my-auto" href="/">
+                <h1 class="tracking-widest p-2">BNC</h1>
             </a>
-            <div class="my-auto space-x-4 w-full">
-                <a href="/">Projects</a>
-                <a href="/">Careers</a>
-                <a href="/">Mission</a>
+            <div class="my-auto w-full">
+                <div class="hidden sm:block space-x-4">
+                    <a href="/">Projects</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Mission</a>
+                </div>
             </div>
             <div class="flex">
-                <button class="ml-auto">Connect</button>
+                <button class="ml-auto pr-2">Connect</button>
             </div>
         </div>
     </nav>
     <section class="flex h-screen w-full min-h-[500px] text-white m-auto bg-[#00000000]">
-        <div class="absolute left-0 h-full w-full z-[1] overflow-hidden pointer-events-all">
+        <div class="absolute left-0 h-[85%] w-full z-[1] overflow-hidden pointer-events-all">
             <LinearVaporwave />
         </div>
-        <div class="flex flex-col w-full text-center z-[2] mx-auto mt-[750px] pointer-events-none">
-            <div class="text-3xl sm:text-5xl md:text-6xl">
-                <h1>Brave New Capital</h1>
+        <div class="flex flex-col h-screen w-full text-center z-[2] mx-auto pointer-events-none">
+            <div class="flex flex-col mt-auto mb-[50px]">
+                <div class="text-4xl sm:text-5xl md:text-6xl">
+                    <h1 class="text-shadow">Brave New Capital</h1>
+                </div>
+                <p class="text-md mt-4 font-light">Remixing classic crypto concepts with cutting edge cryptographic techniques.</p>
             </div>
-            <p class="text-xl mt-4 font-light">Remixing classic crypto concepts with cutting edge cryptographic techniques.</p>
         </div>
     </section>
 
