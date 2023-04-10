@@ -17,7 +17,7 @@
 
     onMount(() => {
         const gui = new dat.GUI();
-        //gui.hide();
+        gui.hide();
         gui.close();
         gui.reset();
         
@@ -27,7 +27,7 @@
         scene.fog = fog;
 
         const textureLoader = new THREE.TextureLoader();
-        const gridTexture = textureLoader.load("/img/grid-white.png");
+        const gridTexture = textureLoader.load("/img/grid.png");
         const heightTexture = textureLoader.load("/img/displacement.png");
         const metalnessTexture = textureLoader.load("/img/metalness.png");
 

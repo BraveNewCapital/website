@@ -13,10 +13,6 @@
 </script>
 
 <style>
-    .text-shadow {
-        text-shadow: 1px 1px 6px #ffffff;
-    }
-
     h1 {
         filter: drop-shadow(0 1px 3px);
     }
@@ -31,6 +27,7 @@
         top: -3px;
         left: -3px;
         z-index: 1;
+        color: #03ffff;
         mix-blend-mode: lighten;
     }
 
@@ -38,32 +35,12 @@
         top: 3px;
         left: 5px;
         z-index: -1;
-        mix-blend-mode: lighten;
-    }
-
-    .top::before {
-        color: #03ffff;
-    }
-
-    .top::after {
         color: #f14bfa;
-    }
-
-    .bottom::before {
-        color: #1795F8;
-    }
-
-    .bottom::after {
-        color: #C527C6;
-    }
-
-    .top, .glitch {
         mix-blend-mode: lighten;
     }
 
-    .full-height {
-        min-height: 100%;
-        height: -webkit-fill-available;
+    .glitch {
+        mix-blend-mode: lighten;
     }
 </style>
 
@@ -81,7 +58,7 @@
                 {#if ready}
                     <div class="flex flex-col my-auto" in:fade={{ delay: 200, duration: 800 }}>
                         <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
-                            <h1 class="top glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
+                            <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
                         </div>
                     </div>
                 {/if}
@@ -102,7 +79,8 @@
     </section>
 
     <footer class="flex bottom-0">
-        <div class="flex mt-16 mb-12 m-auto">
+        
+        <div class="flex flex-col mt-16 mb-12 m-auto">
             <p class="text-xs text-gray-500 m-auto">© {currentYear()} Brave New Capital, DAO.</p>
         </div>
     </footer>

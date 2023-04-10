@@ -16,14 +16,14 @@
             <h2 class="tracking-widest p-2">BNC</h2>
         </a>
         <div class="my-auto w-full">
-            <div class="hidden sm:block space-x-4">
-                <a href="/">Projects</a>
-                <a href="/">Careers</a>
-                <a href="/">Mission</a>
+            <div class="hidden sm:block space-x-6 ml-8">
+                <a class="underline-offset-8 decoration-2 hover:underline" href="/">Projects</a>
+                <a class="underline-offset-8 decoration-2 hover:underline" href="/">Careers</a>
+                <a class="underline-offset-8 decoration-2 hover:underline" href="/">Mission</a>
             </div>
         </div>
         <div class="flex">
-            <button class="ml-auto pr-2 hidden sm:block">Connect</button>
+            <button class="border-2 rounded-lg ml-auto px-4 h-[40px] hidden sm:block my-auto hover:bg-white hover:text-black">Connect</button>
             <div class="sm:hidden my-auto pr-2">
                 <Hamburger bind:open --color="white" --padding={"0px"} />
             </div>
