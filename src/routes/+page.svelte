@@ -73,7 +73,7 @@
         </div>
 
         <div class="text-white text-lg md:text-right w-full md:w-1/2 md:ml-auto">
-            <h2 class="text-2xl font-bold mb-2">Lorem Ipsum</h2>
+            <h2 class="text-2xl font-bold mb-2">Brave New Movement</h2>
             <p>At BraveNewCapital, we're not just building technology, we're building a movement. Our belief that decentralized identity and trust systems are the key to a more free and prosperous future. Join us on our mission to empower individuals and cooperates alike with a self-sovereign approach to identity, trust & reputation.<br/>Contact us today to learn more about how you can get involved. Trust the decentralized future with BraveNewCapital.</p>
         </div>
     </section>
