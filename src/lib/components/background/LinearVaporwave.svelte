@@ -211,6 +211,7 @@
         const clock = new THREE.Clock();
         const tick = () => {
             const elapsedTime = clock.getElapsedTime();
+            effectComposer.render();
 
             plane.position.z = (elapsedTime * speed.value) % 2;
             plane2.position.z = ((elapsedTime * speed.value) % 2) - 2;
@@ -243,8 +244,6 @@
 
             // Set the camera to look at the target
             camera.lookAt(target);
-
-            effectComposer.render();
 
             window.requestAnimationFrame(tick);
         };

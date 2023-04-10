@@ -1,6 +1,7 @@
 <script>
 	import LinearVaporwave from "$lib/components/background/LinearVaporwave.svelte";
     import currentYear from "current-year";
+	import Navbar from "$lib/components/navigation/Navbar.svelte";
 </script>
 
 <style>
@@ -54,30 +55,14 @@
 </style>
 
 <main class="flex flex-col max-w-[1280px] m-auto px-6">
-    <nav class="fixed top-0 left-0 right-0 mx-auto z-[10] backdrop-blur text-white py-1 border-b-[1px] border-gray-700">
-        <div class="flex text-md px-2 space-x-6 w-full max-w-[1280px] mx-auto">
-            <a class="flex flex-col font-bold text-4xl my-auto" href="/">
-                <h2 class="tracking-widest p-2">BNC</h2>
-            </a>
-            <div class="my-auto w-full">
-                <div class="hidden sm:block space-x-4">
-                    <a href="/">Projects</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Mission</a>
-                </div>
-            </div>
-            <div class="flex">
-                <button class="ml-auto pr-2">Connect</button>
-            </div>
-        </div>
-    </nav>
+    <Navbar />
     <section class="flex h-screen w-full min-h-[500px] text-white m-auto bg-[#00000000]">
         <div class="absolute left-0 h-[95%] w-full z-[1] overflow-hidden pointer-events-all">
             <LinearVaporwave />
         </div>
         <div class="flex flex-col h-screen w-full text-center z-[2] mx-auto pointer-events-none">
             <div class="flex flex-col my-auto">
-                <div class="text-5xl xs:text-6xl sm:text-8xl md:text-9xl -rotate-6">
+                <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
                     <h1 class="top glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
                 </div>
             </div>
