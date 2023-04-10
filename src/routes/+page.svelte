@@ -55,23 +55,21 @@
                 <LinearVaporwave />
             </div>
             <div class="flex flex-col full-height w-full text-center z-[2] mx-auto pointer-events-none">
-                <div class="h-screen max-h-full min-h-[600px] flex">
-                    {#if ready}
-                        <div class="flex flex-col m-auto" in:fade={{ delay: 200, duration: 800 }}>
-                            <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
-                                <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
-                            </div>
+                {#if ready}
+                    <div class="flex flex-col my-auto" in:fade={{ delay: 200, duration: 800 }}>
+                        <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
+                            <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
                         </div>
-                    {/if}
-                </div>
+                    </div>
+                {/if}
             </div>
         </div>
     </section>
 
     <section class="space-y-12">
         <div class="text-white text-lg w-full md:w-1/2">
-            <h2 class="text-2xl font-bold mb-2">Lorem Ipsum</h2>
-            <p>Our conviction in bottom-up approaches reflects our commitment to building a more equitable and just future, where decentralized identity and trust systems provide the tools and resources needed for individuals and communities to take control of their digital lives. We believe that everyone has the right to privacy, security, and self-determination, and that decentralized systems are the key to unlocking that potential. Join us on our mission to build a self sovereign future for all.</p>
+            <h2 class="text-2xl font-bold mb-2">Truly decentralised philosophy</h2>
+            <p>Our philosophy of decentralisation leads us to take a bottom up approach to architecture reflects our commitment to building a more equitable and just future, where decentralized identity and trust systems provide the tools and resources needed for individuals and communities to take control of their digital lives. We believe that everyone has the right to privacy, security, and self-determination, and that decentralized systems are the key to unlocking that potential. Join us on our mission to build a self sovereign future for all.</p>
         </div>
 
         <div class="text-white text-lg md:text-right w-full md:w-1/2 md:ml-auto">
