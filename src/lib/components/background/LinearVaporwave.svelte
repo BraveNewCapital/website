@@ -10,8 +10,10 @@
     import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 	import { onMount } from "svelte";
     import { clamp } from "$lib/util/util.js";
+	import { fade, fly } from "svelte/transition";
 
     let canvas;
+    let ready;
 
     onMount(() => {
         const gui = new dat.GUI();
@@ -214,7 +216,7 @@
         const clock = new THREE.Clock();
         const tick = () => {
             const elapsedTime = clock.getElapsedTime();
-            effectComposer.render();
+            if(ready) effectComposer.render();
 
             plane.position.z = (elapsedTime * speed.value) % 2;
             plane2.position.z = ((elapsedTime * speed.value) % 2) - 2;
@@ -248,11 +250,23 @@
             // Set the camera to look at the target
             camera.lookAt(target);
 
+            if(!ready) loaded();
             window.requestAnimationFrame(tick);
         };
 
         tick();
     });
+
+    const loaded = () => {
+        ready = true;
+
+        let opacity = 0;
+        const interval = setInterval(() => {
+            opacity += 0.05;
+            canvas.style.opacity = opacity;
+            if (opacity >= 1) clearInterval(interval);
+        }, 50);
+    }
 </script>
 
-<canvas bind:this={canvas} class="w-full"></canvas>
+<canvas bind:this={canvas} class="w-full" style="opacity: 0;" transition:fly|local={{ delay: 75, duration: 1000 }}></canvas>
