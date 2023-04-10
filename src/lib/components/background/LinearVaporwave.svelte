@@ -189,7 +189,7 @@
             mouse.y = -(e.clientY / sizes.height) * 2 + 1;
         }, false);
 
-        window.addEventListener("resize", () => {
+        const resize = () => {
             sizes.width = window.innerWidth;
             sizes.height = canvas.parentElement.clientHeight;
 
@@ -201,7 +201,10 @@
 
             effectComposer.setSize(sizes.width, sizes.height);
             effectComposer.setPixelRatio(2);
-        });
+        }
+
+        window.addEventListener("resize", resize);
+        window.addEventListener("orientationchange", resize);
 
         const speed = {
             value: 0.15
@@ -252,4 +255,4 @@
     });
 </script>
 
-<canvas bind:this={canvas} class=""></canvas>
+<canvas bind:this={canvas} class="w-full"></canvas>
