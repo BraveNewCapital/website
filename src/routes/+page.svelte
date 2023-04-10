@@ -55,13 +55,15 @@
                 <LinearVaporwave />
             </div>
             <div class="flex flex-col full-height w-full text-center z-[2] mx-auto pointer-events-none">
-                {#if ready}
-                    <div class="flex flex-col my-auto" in:fade={{ delay: 200, duration: 800 }}>
-                        <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
-                            <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
+                <div class="h-screen max-h-full min-h-[600px] flex">
+                    {#if ready}
+                        <div class="flex flex-col m-auto" in:fade={{ delay: 200, duration: 800 }}>
+                            <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
+                                <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
+                            </div>
                         </div>
-                    </div>
-                {/if}
+                    {/if}
+                </div>
             </div>
         </div>
     </section>
