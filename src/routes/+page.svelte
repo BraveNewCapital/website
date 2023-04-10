@@ -7,13 +7,57 @@
     .text-shadow {
         text-shadow: 1px 1px 6px #ffffff;
     }
+
+    h1 {
+        filter: drop-shadow(0 1px 3px);
+    }
+
+    .layers::before, .layers::after {
+        content: attr(data-text);
+        position: absolute;
+        width: 100%;
+    }
+
+    .layers::before {
+        top: -3px;
+        left: -3px;
+        z-index: 1;
+        mix-blend-mode: lighten;
+    }
+
+    .layers::after {
+        top: 3px;
+        left: 5px;
+        z-index: -1;
+        mix-blend-mode: lighten;
+    }
+
+    .top::before {
+        color: #03ffff;
+    }
+
+    .top::after {
+        color: #f14bfa;
+    }
+
+    .bottom::before {
+        color: #1795F8;
+    }
+
+    .bottom::after {
+        color: #C527C6;
+    }
+
+    .top, .glitch {
+        mix-blend-mode: lighten;
+    }
 </style>
 
 <main class="flex flex-col max-w-[1280px] m-auto px-6">
     <nav class="fixed top-0 left-0 right-0 mx-auto z-[10] backdrop-blur text-white py-1 border-b-[1px] border-gray-700">
         <div class="flex text-md px-2 space-x-6 w-full max-w-[1280px] mx-auto">
             <a class="flex flex-col font-bold text-4xl my-auto" href="/">
-                <h1 class="tracking-widest p-2">BNC</h1>
+                <h2 class="tracking-widest p-2">BNC</h2>
             </a>
             <div class="my-auto w-full">
                 <div class="hidden sm:block space-x-4">
@@ -28,15 +72,14 @@
         </div>
     </nav>
     <section class="flex h-screen w-full min-h-[500px] text-white m-auto bg-[#00000000]">
-        <div class="absolute left-0 h-[85%] w-full z-[1] overflow-hidden pointer-events-all">
+        <div class="absolute left-0 h-[95%] w-full z-[1] overflow-hidden pointer-events-all">
             <LinearVaporwave />
         </div>
         <div class="flex flex-col h-screen w-full text-center z-[2] mx-auto pointer-events-none">
-            <div class="flex flex-col mt-auto mb-[50px]">
-                <div class="text-4xl sm:text-5xl md:text-6xl">
-                    <h1 class="text-shadow">Brave New Capital</h1>
+            <div class="flex flex-col my-auto">
+                <div class="text-5xl xs:text-6xl sm:text-8xl md:text-9xl -rotate-6">
+                    <h1 class="top glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
                 </div>
-                <p class="text-md mt-4 font-light">Remixing classic crypto concepts with cutting edge cryptographic techniques.</p>
             </div>
         </div>
     </section>

@@ -76,7 +76,7 @@
         gui.addColor(ambientLight, "color").name("AmbientLight color");
 
         const spotlight = new THREE.SpotLight(
-            "#ffffff",
+            "#03ffff",
             40,
             25,
             Math.PI * 0.1,
@@ -91,7 +91,7 @@
         scene.add(spotlight.target);
 
         const spotlight2 = new THREE.SpotLight(
-            "#ffffff",
+            "#f14bfa",
             40,
             25,
             Math.PI * 0.1,
