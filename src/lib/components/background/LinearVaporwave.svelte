@@ -191,6 +191,11 @@
             mouse.y = -(e.clientY / sizes.height) * 2 + 1;
         }, false);
 
+        canvas.parentElement.addEventListener("mouseleave", (e) => {
+            mouse.x = 0
+            mouse.y = 0;
+        }, false);
+
         const resize = () => {
             sizes.width = window.innerWidth;
             sizes.height = canvas.parentElement.clientHeight;
