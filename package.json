@@ -29,6 +29,7 @@
 	"type": "module",
 	"dependencies": {
 		"@tweenjs/tween.js": "^19.0.0",
+		"body-scroll-lock": "^4.0.0-beta.0",
 		"current-year": "^1.1.12",
 		"lil-gui": "^0.18.1",
 		"three": "^0.151.3"
