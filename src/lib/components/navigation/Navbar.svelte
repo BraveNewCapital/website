@@ -24,7 +24,7 @@
         <div class="my-auto w-full">
             <div class="hidden sm:block space-x-6 ml-8">
                 <a class="underline-offset-8 decoration-2 hover:underline" href="/">Projects</a>
-                <a class="underline-offset-8 decoration-2 hover:underline" href="/">Careers</a>
+                <a class="underline-offset-8 decoration-2 hover:underline" href="/blog">Blog</a>
                 <a class="underline-offset-8 decoration-2 hover:underline" href="/">Mission</a>
             </div>
         </div>

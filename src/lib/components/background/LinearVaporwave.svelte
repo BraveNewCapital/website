@@ -10,7 +10,6 @@
     import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 	import { onMount } from "svelte";
     import { clamp } from "$lib/util/util.js";
-	import { fade, fly } from "svelte/transition";
 
     let canvas;
     let ready;
@@ -274,4 +273,4 @@
     }
 </script>
 
-<canvas bind:this={canvas} class="w-full" style="opacity: 0;" transition:fly|local={{ delay: 75, duration: 1000 }}></canvas>
+<canvas bind:this={canvas} class="w-full" style="opacity: 0;"></canvas>

@@ -8,7 +8,7 @@
     <div class="text-white h-full flex flex-col text-4xl text-center" transition:slide|local>
         <div class="flex flex-col m-auto space-y-8">
             <a href="/" on:click={toggle}>Projects</a>
-            <a href="/" on:click={toggle}>Careers</a>
+            <a href="/blog" on:click={toggle}>Blog</a>
             <a href="/" on:click={toggle}>Mission</a>
 
             <button class="" on:click={toggle}>Connect</button>
