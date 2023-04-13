@@ -1,38 +1,32 @@
-# create-svelte
+# BraveNewCapital
+### Website
+---
+[![Netlify Status](https://api.netlify.com/api/v1/badges/003fc4a8-9caa-41cc-ba50-5b9a7c760828/deploy-status)](https://app.netlify.com/sites/amazing-semifreddo-e8237d/deploys)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+Welcome to the BraveNewCapital website repo! The website is built using the Svelte framework and the `create-svelte` tool.
 
-If you're seeing this, you've probably already done this step. Congrats!
+#### Getting Started
+---
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+To get started with the project, clone the repository to your local machine using the following command:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+`git clone https://github.com/BraveNewCapital/website.git`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Then, navigate to the project directory and install the dependencies using:
 
-```bash
-npm run dev
+`cd website npm install`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Finally, start the development server using:
 
-## Building
+`npm run dev`
 
-To create a production version of your app:
+The website should now be available at `http://localhost:5173`.
 
-```bash
-npm run build
-```
+#### About BraveNewCapital
+---
 
-You can preview the production build with `npm run preview`.
+BraveNewCapital is a development fund and foundation committed to furthering the principles of self-sovereignty and cryptographic trustlessness, with a particular focus on identity, trust, and reputation. Our mission is to build a more equitable and secure digital future by applying these principles to our work.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+To learn more about our mission and projects, please visit our [website](https://amazing-semifreddo-e8237d.netlify.app).
