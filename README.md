@@ -7,7 +7,7 @@
 
 BraveNewCapital is a development fund and foundation committed to furthering the principles of self-sovereignty and cryptographic trustlessness, with a particular focus on identity, trust, and reputation. Our mission is to build a more equitable and secure digital future by applying these principles to our work.
 
-To learn more about our mission and projects, please visit our [website](https://amazing-semifreddo-e8237d.netlify.app).
+To learn more about our mission and projects, please visit our [website](https://bravenew.capital).
 
 
 Welcome to the BraveNewCapital website repo! The website is built using the Svelte framework and the `create-svelte` tool.
