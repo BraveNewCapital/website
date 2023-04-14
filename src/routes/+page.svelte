@@ -1,6 +1,5 @@
 <script>
 	import LinearVaporwave from "$lib/components/background/LinearVaporwave.svelte";
-    import currentYear from "current-year";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
 
@@ -52,7 +51,7 @@
             {#if ready}
                 <div class="flex flex-col my-auto" in:fade={{ delay: 200, duration: 800 }}>
                     <div class="text-5xl xs:text-6xl sm:text-8xl md:text-8xl lg:text-9xl -rotate-6">
-                        <h1 class="glitch layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
+                        <h1 class="glitch nosignal layers text-white/80 max-w-[420px] sm:max-w-[600px] md:max-w-[700px] mx-auto" data-text="Brave New Capital">Brave New Capital</h1>
                     </div>
                 </div>
             {/if}
@@ -62,19 +61,12 @@
 
 <section class="space-y-12">
     <div class="text-white text-lg w-full md:w-1/2">
-        <h2 class="text-2xl font-bold mb-2">Truly decentralised philosophy</h2>
+        <h2 class="text-2xl font-bold mb-2 monument-extended">Truly decentralised philosophy</h2>
         <p>Our philosophy of decentralisation leads us to take a bottom up approach to architecture reflects our commitment to building a more equitable and just future, where decentralized identity and trust systems provide the tools and resources needed for individuals and communities to take control of their digital lives. We believe that everyone has the right to privacy, security, and self-determination, and that decentralized systems are the key to unlocking that potential. Join us on our mission to build a self sovereign future for all.</p>
     </div>
 
     <div class="text-white text-lg md:text-right w-full md:w-1/2 md:ml-auto">
-        <h2 class="text-2xl font-bold mb-2">Brave New Movement</h2>
+        <h2 class="text-2xl font-bold mb-2 monument-extended">Brave New Movement</h2>
         <p>At BraveNewCapital, we're not just building technology, we're building a movement. Our belief that decentralized identity and trust systems are the key to a more free and prosperous future. Join us on our mission to empower individuals and cooperates alike with a self-sovereign approach to identity, trust & reputation.<br/>Contact us today to learn more about how you can get involved. Trust the decentralized future with BraveNewCapital.</p>
     </div>
 </section>
-
-<footer class="flex bottom-0">
-    
-    <div class="flex flex-col mt-16 mb-12 m-auto">
-        <p class="text-xs text-gray-500 m-auto">© {currentYear()} Brave New Capital, DAO.</p>
-    </div>
-</footer>

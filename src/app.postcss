@@ -11,6 +11,11 @@
     src: url("/fonts/NoSignal.otf");
 }
 
+@font-face {
+    font-family: "MonumentExtended";
+    src: url("/fonts/MonumentExtended.otf");
+}
+
 html, body {
     margin: 0;
     height: 100%;
@@ -18,14 +23,6 @@ html, body {
 
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-}
-
-h1 {
-    font-family: "NoSignal", sans-serif;
-}
-
-h2 {
-    font-family: "NoSignal", sans-serif;
 }
 
 .lil-gui {
@@ -36,4 +33,29 @@ h2 {
     min-height: 100%;
     height: -webkit-fill-available;
     max-height: 100vh;
+}
+
+.nosignal {
+    font-family: "NoSignal", sans-serif;
+}
+
+.monument-extended {
+    font-family: "MonumentExtended", sans-serif;
+}
+
+article .content h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+article .content h2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+article .content p {
+    line-height: 35px;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 40px;
 }
