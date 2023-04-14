@@ -196,17 +196,19 @@
         }, false);
 
         const resize = () => {
-            sizes.width = window.innerWidth;
-            sizes.height = canvas.parentElement.clientHeight;
+            try {
+                sizes.width = window.innerWidth;
+                sizes.height = canvas.parentElement.clientHeight;
 
-            camera.aspect = sizes.width / sizes.height;
-            camera.updateProjectionMatrix();
+                camera.aspect = sizes.width / sizes.height;
+                camera.updateProjectionMatrix();
 
-            renderer.setSize(sizes.width, sizes.height);
-            renderer.setPixelRatio(2);
+                renderer.setSize(sizes.width, sizes.height);
+                renderer.setPixelRatio(2);
 
-            effectComposer.setSize(sizes.width, sizes.height);
-            effectComposer.setPixelRatio(2);
+                effectComposer.setSize(sizes.width, sizes.height);
+                effectComposer.setPixelRatio(2);
+            } catch (e) { }
         }
 
         window.addEventListener("resize", resize);
