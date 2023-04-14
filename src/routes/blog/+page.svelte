@@ -8,7 +8,7 @@
             <a href="{post.path}" class="flex flex-col bg-gray-700/30 rounded-lg p-12">
                 <h2 class="monument-extended text-8xl">{post.meta.title}</h2>
                 <p class="text-lg my-6">{post.meta.brief}</p>
-                <img class="rounded-lg h-[300px] object-cover h-[300px] w-full" src="{post.meta.image}" alt="" />
+                <img class="rounded-lg h-[300px] object-cover h-[300px] w-full" src="{post.meta.image}" alt="{post.meta.title}" />
                 <p class="text-gray-500 text-sm mt-6 ml-auto">{post.meta.date}</p>
             </a>
         {/each}
