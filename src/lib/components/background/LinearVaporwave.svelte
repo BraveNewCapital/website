@@ -8,11 +8,12 @@
     import { RGBShiftShader } from "three/examples/jsm/shaders/RGBShiftShader.js";
     import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
     import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
-	import { onMount } from "svelte";
+	import { onDestroy, onMount } from "svelte";
     import { clamp } from "$lib/util/util.js";
 
     let canvas;
     let ready;
+    let running;
 
     onMount(() => {
         const gui = new dat.GUI();
@@ -221,6 +222,7 @@
 
         const clock = new THREE.Clock();
         const tick = () => {
+            if(!canvas) return;
             const elapsedTime = clock.getElapsedTime();
             if(ready) effectComposer.render();
 
@@ -257,7 +259,14 @@
             camera.lookAt(target);
 
             if(!ready) loaded();
-            window.requestAnimationFrame(tick);
+
+            if(opacity < 1) {
+                fadeIn();
+            }
+
+            if(running) {
+                window.requestAnimationFrame(tick);
+            }
         };
 
         tick();
@@ -265,13 +274,13 @@
 
     const loaded = () => {
         ready = true;
+        running = true;
+    }
 
-        let opacity = 0;
-        const interval = setInterval(() => {
-            opacity += 0.05;
-            canvas.style.opacity = opacity;
-            if (opacity >= 1) clearInterval(interval);
-        }, 50);
+    let opacity = 0;
+    const fadeIn = () => {
+        opacity += 0.025;
+        canvas.style.opacity = opacity;
     }
 </script>
 
