@@ -3,7 +3,7 @@ title: "The Ideological Roots of Blockchain and Cryptography"
 date: "2023-04-15"
 author: "Steake"
 image: "https://imageio.forbes.com/specials-images/dam/imageserve/908633080/960x0.jpg?format=jpg&width=960"
-brief: "In the vast, ever-evolving landscape of technology, a new era has dawned; one of decentralization, security, and individual sovereignty. At the core of this movement lies the powerful combination of blockchain and cryptography, which has given rise to cryptocurrencies and a plethora of decentralized applications. This article delves deep into the ideological roots of this transformative technology, exploring the concept of "Crypto Anarchy" and its profound impact on our digital world."
+brief: "In the vast, ever-evolving landscape of technology, a new era has dawned; one of decentralization, security, and individual sovereignty. At the core of this movement lies the powerful combination of blockchain and cryptography, which has given rise to cryptocurrencies and a plethora of decentralized applications. This article delves deep into the ideological roots of this transformative technology, exploring the concept of Crypto Anarchy and its profound impact on our digital world."
 ---
 
 ## The Genesis of Crypto Anarchy
