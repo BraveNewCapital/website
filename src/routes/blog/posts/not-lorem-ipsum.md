@@ -1,5 +1,5 @@
 ---
-title: The Ideological Roots of Blockchain and Cryptography
+title: "The Ideological Roots of Blockchain and Cryptography"
 date: "2023-04-15"
 author: "Steake"
 image: "https://imageio.forbes.com/specials-images/dam/imageserve/908633080/960x0.jpg?format=jpg&width=960"
