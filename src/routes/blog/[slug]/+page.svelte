@@ -16,7 +16,7 @@
 </svelte:head>
 
 <article class="text-white mt-32" in:fade>
-    <h1 class="monument-extended text-5xl md:text-7xl">{data.title}</h1>
+    <h1 class="monument-extended text-3xl md:text-7xl break-words">{data.title}</h1>
     <img class="rounded-lg max-h-[430px] object-cover w-full my-4" src="{data.image}" alt="{data.title}" />
     <p class="text-gray-500 text-sm">{date.format(date.parse(data.date, 'YYYY-MM-DD'), 'ddd, MMM DD YYYY')}</p>
     <p class="text-gray-500 text-sm">by {data.author}</p>
