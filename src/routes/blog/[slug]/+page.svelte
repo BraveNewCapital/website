@@ -2,6 +2,11 @@
     export let data;
 
     import date from 'date-and-time';
+	import SvelteMarkdown from 'svelte-markdown';
+
+    const getMD = async () => {
+        return data.content;
+    }
 </script>
 
 <svelte:head>
@@ -16,7 +21,9 @@
     <p class="text-gray-500 text-sm">by {data.author}</p>
 
     <div class="content my-8">
-        <svelte:component this={data.content} />
+        {#await getMD() then source}
+            <SvelteMarkdown {source} />
+        {/await}
     </div>
 </article>
 

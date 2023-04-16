@@ -1,7 +1,13 @@
-export async function load({ params, fetch }){
-    const post = await import(`../posts/${params.slug}.md`);
+import parseMD from 'parse-md';
+import { getCurrentCID } from '$lib/util/util';
+
+export async function load({ params, fetch }) {
+    const cid = await getCurrentCID();
+    const file = await fetch(`https://dweb.link/ipfs/${cid}/${params.slug}.md`);
+    const post = parseMD(await file.text());
+
     const { title, date, author, image } = post.metadata;
-    const content = post.default;
+    const content = post.content;
 
     const response = await fetch(`/api/posts`);
     const posts = await response.json();
