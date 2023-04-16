@@ -3,6 +3,7 @@
 
     import date from 'date-and-time';
 	import SvelteMarkdown from 'svelte-markdown';
+	import { fade } from 'svelte/transition';
 
     const getMD = async () => {
         return data.content;
@@ -14,7 +15,7 @@
   <meta property="og:title" content={data.title} />
 </svelte:head>
 
-<article class="text-white mt-32">
+<article class="text-white mt-32" in:fade>
     <h1 class="monument-extended text-5xl md:text-7xl">{data.title}</h1>
     <img class="rounded-lg max-h-[430px] object-cover w-full my-4" src="{data.image}" alt="{data.title}" />
     <p class="text-gray-500 text-sm">{date.format(date.parse(data.date, 'YYYY-MM-DD'), 'ddd, MMM DD YYYY')}</p>
@@ -27,11 +28,11 @@
     </div>
 </article>
 
-<section class="text-white my-8">
+<section class="text-white my-8" in:fade>
     <h1 class="monument-extended text-4xl md:text-5xl mb-8">Read More</h1>
     <div class="space-y-8">
         {#each data.related as article}
-            <a class="flex flex-col md:flex-row" href="{article.path}">
+            <a href="{article.path}" class="flex flex-col md:flex-row">
                 <img class="rounded-lg w-full md:w-[248px] h-[248px] md:h-[186px] object-cover" src="{article.meta.image}" alt="{article.meta.title}" />
                 <div class="flex flex-col w-full md:px-4 h-[186px] mt-4 md:mt-0">
                     <h2 class="monument-extended text-2xl md:text-4xl line-clamp-1">{article.meta.title}</h2>
