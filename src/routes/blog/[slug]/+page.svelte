@@ -34,7 +34,7 @@
             <a class="flex flex-col md:flex-row" href="{article.path}">
                 <img class="rounded-lg w-full md:w-[248px] h-[248px] md:h-[186px] object-cover" src="{article.meta.image}" alt="{article.meta.title}" />
                 <div class="flex flex-col w-full md:px-4 h-[186px] mt-4 md:mt-0">
-                    <h2 class="monument-extended text-4xl line-clamp-1">{article.meta.title}</h2>
+                    <h2 class="monument-extended text-2xl md:text-4xl line-clamp-1">{article.meta.title}</h2>
                     <p class="line-clamp-3 my-4 text-lg leading-8">{article.meta.brief}</p>
                     <p class="text-sm text-gray-500">{date.format(date.parse(article.meta.date, 'YYYY-MM-DD'), 'ddd, MMM DD YYYY')}</p>
                 </div>
