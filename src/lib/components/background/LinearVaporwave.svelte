@@ -27,9 +27,9 @@
         scene.fog = fog;
 
         const textureLoader = new THREE.TextureLoader();
-        const gridTexture = textureLoader.load("/img/grid.png");
-        const heightTexture = textureLoader.load("/img/displacement.png");
-        const metalnessTexture = textureLoader.load("/img/metalness.png");
+        const gridTexture = textureLoader.load("/img/grid.webp");
+        const heightTexture = textureLoader.load("/img/displacement.webp");
+        const metalnessTexture = textureLoader.load("/img/metalness.webp");
 
         gridTexture.minFilter = THREE.LinearMipmapLinearFilter;
         gridTexture.magFilter = THREE.LinearFilter;
