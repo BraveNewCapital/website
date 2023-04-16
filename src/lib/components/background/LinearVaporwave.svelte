@@ -260,7 +260,7 @@
 
             if(!ready) loaded();
 
-            if(opacity < 1) {
+            if(opacity < 1 && elapsedTime > 0.25) {
                 fadeIn();
             }
 
