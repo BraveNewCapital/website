@@ -5,7 +5,7 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<div class="w-full text-white mt-32 w-full">
+<div class="w-full text-white mt-32">
     <div class="mt-8 flex flex-col w-full max-w-[1024px] mx-auto space-y-12">
         {#each data.posts as post}
             <a href="{post.path}" class="flex flex-col bg-gray-700/30 hover:bg-gray-700/40 rounded-lg p-8 md:p-16" in:fade>

@@ -29,7 +29,7 @@
                 <a class="underline-offset-8 decoration-2 hover:underline" href="/blog">
                     <button class="h-full border-t-2 border-transparent hover:border-[#03ffff] w-[80px] transition ease-in-out duration-400">Blog</button>
                 </a>
-                <a class="underline-offset-8 decoration-2 hover:underline" href="/">
+                <a class="underline-offset-8 decoration-2 hover:underline" href="/mission">
                     <button class="h-full border-t-2 border-transparent hover:border-[#03ffff] w-[80px] transition ease-in-out duration-400">Mission</button>
                 </a>
             </div>
