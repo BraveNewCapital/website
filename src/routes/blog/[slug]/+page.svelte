@@ -4,15 +4,21 @@
     import date from 'date-and-time';
 	import SvelteMarkdown from 'svelte-markdown';
 	import { fade } from 'svelte/transition';
-
+    import { page } from '$app/stores';
+    
     const getMD = async () => {
         return data.content;
     }
 </script>
 
 <svelte:head>
-  <title>Brave New Capital - {data.title}</title>
-  <meta property="og:title" content={data.title} />
+    <title>{data.title}</title>
+    <meta name="description" content={data.brief}>
+    <meta property="og:title" content={data.title} />
+    <meta property="og:description" content={data.brief}>
+    <meta property="og:image" content={data.image}>
+    <meta property="og:url" content={$page.url.href}>
+    <meta property="og:type" content="article">
 </svelte:head>
 
 <article class="text-white mt-32" in:fade>

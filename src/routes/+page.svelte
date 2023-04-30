@@ -42,6 +42,14 @@
     }
 </style>
 
+<svelte:head>
+    <meta name="description" content="BraveNew.Capital is a pioneering technology company focused on revolutionising the digital landscape by developing innovative, secure, and decentralised trust solutions. By harnessing cutting-edge research and advanced algorithms, our groundbreaking Open Reputation Kit (ORK) offers a universal trust scoring system that seamlessly integrates across platforms and applications. Our mission is to empower individuals and organisations in the rapidly evolving world of web3, NFTs, and DeFi, fostering a secure and transparent environment for online interactions and transactions.">
+    <meta property="og:title" content="Brave New Capital" />
+    <meta property="og:description" content="BraveNew.Capital is a pioneering technology company focused on revolutionising the digital landscape by developing innovative, secure, and decentralised trust solutions. By harnessing cutting-edge research and advanced algorithms, our groundbreaking Open Reputation Kit (ORK) offers a universal trust scoring system that seamlessly integrates across platforms and applications. Our mission is to empower individuals and organisations in the rapidly evolving world of web3, NFTs, and DeFi, fostering a secure and transparent environment for online interactions and transactions.">
+    <meta property="og:image" content="https://bravenew.capital/img/BNC.webp">
+    <meta property="og:url" content="https://bravenew.capital/">
+</svelte:head>
+
 <section class="flex min-h-full w-full text-white m-auto bg-[#00000000]">
     <div class="h-full w-full m-auto flex min-h-[600px]">
         <div class="absolute left-0 min-h-[600px] h-[95%] w-full overflow-hidden pointer-events-all">

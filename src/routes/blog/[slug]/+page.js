@@ -6,7 +6,7 @@ export async function load({ params, fetch }) {
     const file = await fetch(`https://dweb.link/ipfs/${cid}/${params.slug}.md`);
     const post = parseMD(await file.text());
 
-    const { title, date, author, image } = post.metadata;
+    const { title, brief, date, author, image } = post.metadata;
     const content = post.content;
 
     const response = await fetch(`/api/posts`);
@@ -17,6 +17,7 @@ export async function load({ params, fetch }) {
     return {
         content,
         title,
+        brief,
         date,
         author,
         image,

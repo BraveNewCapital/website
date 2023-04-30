@@ -2,6 +2,14 @@
 	import { fade } from "svelte/transition";
 </script>
 
+<svelte:head>
+    <meta name="description" content="BraveNew.Capital is a pioneering technology company focused on revolutionising the digital landscape by developing innovative, secure, and decentralised trust solutions. By harnessing cutting-edge research and advanced algorithms, our groundbreaking Open Reputation Kit (ORK) offers a universal trust scoring system that seamlessly integrates across platforms and applications. Our mission is to empower individuals and organisations in the rapidly evolving world of web3, NFTs, and DeFi, fostering a secure and transparent environment for online interactions and transactions.">
+    <meta property="og:title" content="Brave New Capital" />
+    <meta property="og:description" content="BraveNew.Capital is a pioneering technology company focused on revolutionising the digital landscape by developing innovative, secure, and decentralised trust solutions. By harnessing cutting-edge research and advanced algorithms, our groundbreaking Open Reputation Kit (ORK) offers a universal trust scoring system that seamlessly integrates across platforms and applications. Our mission is to empower individuals and organisations in the rapidly evolving world of web3, NFTs, and DeFi, fostering a secure and transparent environment for online interactions and transactions.">
+    <meta property="og:image" content="https://bravenew.capital/img/BNC.webp">
+    <meta property="og:url" content="https://bravenew.capital/">
+</svelte:head>
+
 <section class="w-full max-w-[800px] mx-auto text-white mt-32 text-xl space-y-6 leading-9" in:fade>
     <h1 class="text-3xl md:text-5xl leading-12 font-bold">Shaping Web3 through Cryptography, Self-Sovereignty, and Incentivised Trust</h1>
 
